@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://i.ibb.co/2F9XjDJ/logo.jpg">
+    <script
+      src="https://kit.fontawesome.com/95d0e58e49.js"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/css">
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          background: #222431;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        }
+
+        .details_div {
+          width: 50%;
+          position: absolute;
+          top: 25%;
+          right: 20%;
+          left: 25%;
+          background: #5f69b1;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          color: #fff;
+          border-radius: 10px;
+        }
+
+        .img_div {
+          position: absolute;
+          top: 2%;
+          left: 2%;
+          width: 5%;
+          height: 10%;
+        }
+
+        .details_div img {
+          margin: 5%;
+          width: 35%;
+          height: 5%;
+        }
+
+        .img_div img {
+          height: 100%;
+          width: 100%;
+        }
+
+        .details_div_p1 {
+          margin-top: 2%;
+          margin-bottom: 4%;
+          font-size: 30px;
+        }
+        .details_div_p2 {
+          margin-top: 5%;
+          margin-bottom: 5%;
+        }
+
+        #icon_2 {
+          display: none;
+        }
+    </style>
+    <title>Email Verification</title>
+  </head>
+  <body>
+      <div class="img_div">
+        <img src="https://i.ibb.co/W0dYYbc/Piscium-Icon-White2.png" alt="Piscium-Icon-White2" border="0">
+    </div>
+
+    <div class="details_div" id="details_div">
+        <p class="details_div_p1" id="p1">Email has been verfied succesfully.</p>
+        <i class="fa-solid fa-envelope-circle-check fa-8x" id="icon_1"></i>
+        <i class="fa-solid fa-circle-exclamation fa-8x" id="icon_2"></i>
+        <p class="details_div_p2" id="p2">You can now proceed to login through our app.</p>
+        <img src="https://i.ibb.co/mSF7RHG/Piscium-Labs-Name-White.png" alt="Piscium-Labs-Name-White" border="0">
+    </div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const error = params.get("error");
+      const message = params.get("message");
+
+      if (error != null && message != null) {
+        document.getElementById("p1").innerHTML = "Oops an unexpected error occured";
+        document.getElementById("p2").innerHTML = message;
+        document.getElementById("icon_1").style.display = "none";
+        document.getElementById("icon_2").style.display = "block";
+      }
+
+    </script>
+  </body>
+</html>
