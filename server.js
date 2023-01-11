@@ -6,7 +6,7 @@ const bodyParser = require('express').json;
 const cors = require('cors');
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://pisciumweb.web.app/",
 }))
 
 app.use(bodyParser());
