@@ -15,7 +15,8 @@ const { v4: uuidv4 } = require("uuid");
 
 const development = "http://localhost:2000/";
 const production = "https://pisciumweb.web.app/";
-const currentUrl = process.env.NODE_ENV ? production : development;
+// const currentUrl = process.env.NODE_ENV ? production : development;
+const currentUrl = production;
 
 const path = require("path");
 
