@@ -7,7 +7,7 @@ const cors = require('cors');
 
 app.use(cors({
     origin: "https://pisciumweb.web.app",
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
              
 }))
 
