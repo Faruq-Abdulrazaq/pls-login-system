@@ -14,9 +14,8 @@ SibApiV3Sdk.ApiClient.instance.authentications["api-key"].apiKey =
 const { v4: uuidv4 } = require("uuid");
 
 const development = "http://localhost:2000/";
-const production = "https://pisciumweb.web.app/";
-// const currentUrl = process.env.NODE_ENV ? production : development;
-const currentUrl = production;
+const production = "https://drab-ruby-crane-belt.cyclic.app/";
+const currentUrl = process.env.NODE_ENV ? production : development;
 
 const path = require("path");
 
